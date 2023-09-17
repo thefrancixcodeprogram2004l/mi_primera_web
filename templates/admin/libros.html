@@ -33,7 +33,7 @@
         </div>
         <div class="col-7">
             <div class="table-responsive">
-                <table class="table table-primary">
+                <table class="table table-primary table-bordered">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -50,12 +50,16 @@
                             <td>{{ libro[1] }}</td>
                             <td>
                                 <img width="60" src="/img/{{ libro[2] }}" class="img-fluid rounded-top" alt="">
-                                {{ libro[2] }}
+                                
                             </td>
-                            <td>{{ libro[3] }}</td>
+                            <td>
+                                
+                                <a name="" id="" class="btn btn-success" href="{{ libro[3] }}" role="button">Enlace...</a>
+                                    
+                            </td>
                             <td>
                                 <form action="/admin/libros/borrar" method="post">
-                                    <input value="{{ libro[0] }}" type="text" name="txtID" id="txtID">
+                                    <input value="{{ libro[0] }}" type="hidden" name="txtID" id="txtID">
                                         <button type="submit" class="btn btn-danger">Eliminar</button>
                                 </form>
                             </td>
